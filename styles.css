@@ -1,0 +1,48 @@
+@font-face {
+    font-family: nightlife;
+    src: url(fonts/nightlife/nightlife.ttf);
+}
+
+body {
+    font-family: Gotham HTF,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    background-color: black;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    transform: scale(3);
+    transition: 0.25s;
+    font-family: "nightlife";
+}
+
+.header:hover {
+    transform: scale(4);
+    transition: 0.25s;
+}
+
+.header:hover .trailer-overlay {
+    filter: blur(100%);
+}
+
+.trailer {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
+    filter: brightness(80%);
+}
+
+.trailer-overlay {
+    max-width: 100%;
+    height: auto;
+    background-color: aqua;
+}
