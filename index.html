@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Muzic4You</title>
-    <div>
-        <nav class="navbar"></nav>
+    <div class="top-container">
+        <a class="logo" href=".home">Muzic4U</a> 
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li><a class="home" href=".home">Home</a></li>
+                <li><a class="home" href=".home">Events</a></li>
+                <li><a class="home" href=".home">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="main">
-        <video autoplay loop class="trailer">
-            <source src="vid/trailer.mp4" type="video/mp4"> 
-            <div class="trailer-overlay">
-
-            </div>           
+    <div class="main">        
+        <div class="header">Muzic4U</div>
+        <video autoplay muted class="trailer">
+            <source src="vid/trailer.mp4" type="video/mp4">          
         </video>
-        <h1 class="header">
-            Muzic4You
-        </h1>
+        <div class="trailer-overlay"></div>  
     </div>
 </head>
 <body>

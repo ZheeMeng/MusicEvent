@@ -7,21 +7,76 @@ body {
     font-family: Gotham HTF,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     background-color: black;
     margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-family: "nightlife";
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    transition: 0.25s;
+}
+
+.nav-list li {
+    transition: 0.25s;
+}
+
+.nav-list li:hover{
+    background-color: rgb(22, 22, 22);
+    transition: 0.25s;
+}
+
+.nav-list li a{
+    display: block;
+    text-decoration: none;
+    color: grey;
+    padding: 1vh;
+    letter-spacing: .1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .main {
+    width: 100vw;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
+    overflow: hidden;
 }
 
 .header {
     position: absolute;
     color: white;
+    font-family: "nightlife";
+    letter-spacing: .1rem;
     font-size: 4vw;
+    font-weight: 600;
+    z-index: 4;
+    cursor: pointer;
     transform: scale(3);
     transition: 0.25s;
-    font-family: "nightlife";
 }
 
 .header:hover {
@@ -29,20 +84,26 @@ body {
     transition: 0.25s;
 }
 
-.header:hover .trailer-overlay {
-    filter: blur(100%);
+.header:hover ~ .trailer {
+    filter: blur(10px);
+    transition: 0.25s;
 }
 
 .trailer {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: bottom;
-    filter: brightness(80%);
+    width: inherit;
+    max-height: inherit;
+    z-index: 1;
+    transition: 0.25s;
+    margin-top: -80px;
+    margin-bottom: -80px;
 }
 
 .trailer-overlay {
-    max-width: 100%;
-    height: auto;
-    background-color: aqua;
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+    position: absolute;
+    background: linear-gradient(orange, white);
+    filter: opacity(0.4);
+    z-index: 2;
 }
